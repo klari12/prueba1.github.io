@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to mi página
+
+Me fliparía saber hacer esta cosita para hacer un curso de data science!!
+
+https://miro.medium.com/max/640/1*Qv6Eo6gFDgOEMC54Ugspig.jpeg
 
 You can use the [editor on GitHub](https://github.com/klari12/prueba1.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
