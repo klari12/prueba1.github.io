@@ -2,7 +2,7 @@
 
 Me fliparía saber hacer esta cosita para hacer un curso de data science!!
 
-https://miro.medium.com/max/640/1*Qv6Eo6gFDgOEMC54Ugspig.jpeg
+![Yo]https://miro.medium.com/max/640/1*Qv6Eo6gFDgOEMC54Ugspig.jpeg 
 
 You can use the [editor on GitHub](https://github.com/klari12/prueba1.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -13,7 +13,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```r
-## mghmmh es esto capaz de hacer cositas con r directamente??
+## mhmmh es esto capaz de hacer cositas con r directamente??
 
 variable <- 5^6
 datosmegaimportantes <- c("gato", "fruta", "merienda")
