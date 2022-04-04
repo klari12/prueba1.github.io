@@ -1,15 +1,15 @@
 ---
 title: "DataTransformationII"
-output: html_document
 date: "Course ----"
 ---
+```{r setup, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(
+  include = TRUE, comment = NA, echo = TRUE,
+  message = FALSE, warning = FALSE, cache = TRUE
+)
+```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
+# Libraries
 ```{r}
 library(ggplot2)
 library(data.table)
