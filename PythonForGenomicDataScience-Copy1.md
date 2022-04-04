@@ -7,7 +7,6 @@ Lists are also objects. Let's imagine we make a list with the expression of a ge
 
 
 ```python
-# 
 gene_expression = ["SHOX1", 2.234, 500]
 print(gene_expression)
 del gene_expression[0]
@@ -80,7 +79,7 @@ DNA = input("Insert your DNA sequence ")
 
 ```
 
-    Insert your DNA sequence acgttcgacgtnNNN
+    Insert your DNA sequence acgttcgacgtNNN
     
 
 
