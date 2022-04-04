@@ -1,0 +1,84 @@
+---
+title: "DataTransformationII"
+output: html_document
+date: "Course ----"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(ggplot2)
+library(data.table)
+library(missForest)
+library(gridExtra)
+```
+
+---
+# Dataset: car speed and braking times
+With the last two lines we are creating outliers in the "speed" variable
+```{r}
+datos.orig <- cars[1:30, ]
+# With the following two lines we are creating outliers in the "speed" variable
+datos.outliers <- data.table(speed=c(19,19,20,20,20), dist=c(190, 186, 210, 220, 218))
+datos <- as.data.table(rbind(datos.orig, datos.outliers))
+```
+We can observe that min and max are very distant for the dist variable.
+```{r}
+summary(datos)
+```
+# Plotting the datasets with and without outliers
+```{r}
+par(mfrow=c(1, 2))
+plot(datos$speed, datos$dist, xlim=c(0, 28), ylim=c(0, 230), main="Con outliers", xlab="velocidad", ylab="distancia", pch="*", col="red", cex=2)
+abline(lm(dist ~ speed, data=datos), col="blue", lwd=3, lty=2)
+plot(datos.orig$speed, datos.orig$dist, xlim=c(0, 28), ylim=c(0, 230), main="Sin outliers", xlab="velocidad", ylab="distancia", pch="*", col="red", cex=2)
+abline(lm(dist ~ speed, data=datos.orig), col="blue", lwd=3, lty=2)
+```
+# Histogram
+
+```{r}
+ggplot(datos) +
+  aes(x = dist) +
+  geom_histogram( binwidth=5, fill="#69b3a2", color="#e9ecef", alpha=0.9) 
+```
+
+# Boxplot
+
+```{r}
+ggplot(datos) +
+  aes(x = "",y = dist) +
+  geom_boxplot() +
+  theme_minimal()
+```
+
+# Outlier detection using IQR
+
+```{r}
+data.iqr <- IQR(datos$dist) 
+data.iqr
+cuartiles <- quantile(datos$dist, c(0.25,0.5,0.75))
+cuartiles
+```
+Es igual que: quantile(datos$dist, 3/4)-quantile(datos$dist, 1/4) # datos$dist es lo mismo que datos[,dist]
+
+# Outlier identification protocol
+1,5 * interquartile range (lower and upper) if we are working with only 1 variable  
+Outliers_min is the minimum value that an observation can have before being considered an outlier
+```{r}
+outliers_min<-as.numeric(cuartiles[1])-1.5*data.iqr
+outliers_min
+```
+
+Outliers_max is the maximum value that an observation can have before being considered an outlier
+```{r}
+outliers_max<-as.numeric(cuartiles[3])+1.5*data.iqr
+outliers_max
+```
