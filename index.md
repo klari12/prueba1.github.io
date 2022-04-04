@@ -6,7 +6,7 @@ In this course we will...
 1. [Python for genomic data science](PythonForGenomicDataScience-Copy1.md)
 2. Example2
 3. Example3
-4. [Data transformation with R: Outlier detection](PruebaRmarkdown.Rmd)
+4. [Data transformation with R: Outlier detection](DataTransformationII.html)
 
 ### Introduction
 With Github pages we can include images, chuncks of code, etc. 
