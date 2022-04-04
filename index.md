@@ -5,7 +5,7 @@ In this course we will...
 | Session     | Contents |
 | ----------- | ----------- |
 | Day 1       | Python for ... |
-| Day 2   | Data transformation X |
+| Day 2   | Data transformation ... |
 
 ### Table of contents:
 1. [Python for genomic data science](PythonForGenomicDataScience-Copy1.md)
