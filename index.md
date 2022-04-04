@@ -12,7 +12,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
+```r
+## mghmmh es esto capaz de hacer cositas con r directamente??
+
+variable <- 5^6
+datosmegaimportantes <- c("gato", "fruta", "merienda")
+print(datosmegaimportantes)
+```
 Syntax highlighted code block
 
 # Header 1
