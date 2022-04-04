@@ -1,2 +1,2 @@
 # prueba1.github.io
-Me encataría que esta máquina infernal funcionase!!
+Trying to build up my first Github pages.
